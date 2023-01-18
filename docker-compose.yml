@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  scripts:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /usr/sbin/crond -f -l 8
+    volumes:
+      - .:/app
